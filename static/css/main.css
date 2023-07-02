@@ -32,9 +32,8 @@ form > div {
 }
 
 .form-wrapper-colum > img {
-    max-width: 50%;
+    max-width: 100%;
     max-height: 50%;
-
 }
 
 .form > select {
