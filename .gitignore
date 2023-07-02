@@ -126,6 +126,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+venv
+jpeg/poppler-0.68.0
 build/
 develop-eggs/
 dist/
