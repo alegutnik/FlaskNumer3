@@ -1,4 +1,4 @@
 # Distribution / packaging
 .Python
-venv/**
-jpeg/poppler-0.68.0/**
+venv/
+jpeg/poppler-0.68.0/
