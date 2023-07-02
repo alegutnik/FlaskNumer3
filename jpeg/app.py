@@ -7,9 +7,11 @@ from jpeg.settings_page import MyPDF
 
 
 class Card:
-    def __init__(self, name, birthday):
+    def __init__(self, name, birthday, language, gender):
         self.name = name
         self.birthday = birthday
+        self.language = language
+        self.gender = gender
 
         def sum_value(value):
             while value >= 10 and value != 11:
@@ -36,7 +38,7 @@ class Card:
         text_color_white = colors.HexColor("#FFFFFF")  # Синий
 
         # -------------------------------------
-        pdf = MyPDF(self.name, self.birthday)
+        pdf = MyPDF(self.name, self.birthday,self.language, self.gender)
         # Устанавливаем цвет текста
         pdf.pdf.setFillColor(text_color_blue)
 

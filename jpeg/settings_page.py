@@ -7,12 +7,12 @@ from reportlab.pdfgen import canvas
 
 
 class MyPDF:
-    def __init__(self, name, birthday):
+    def __init__(self, name, birthday, language, gender):
         self.name = name
         self.birthday = birthday
+        self.language = language
+        self.gender = gender
         self.width, self.height = 559, 512
-
-
 
         def create_folder(folder_path):
             try:
@@ -20,7 +20,6 @@ class MyPDF:
                 print(f"Folder '{folder_path}' created successfully.")
             except FileExistsError:
                 print(f"Folder '{folder_path}' already exists.")
-
 
         # Создаем новый PDF-файл
         width, height = 559, 512
@@ -42,14 +41,13 @@ class MyPDF:
         self.pdf.setFont("Klein-Medium", 18 * mm)
 
         # Вставка картинки на страницу
-        image_path = "./jpeg/template/Шаблон RUS.png"
-        # if app.language == "RUS" and app.gender == "Woman":
-        #     image_path = "./template/Шаблон RUS.png"
-        # elif app.language == "UKR" and app.gender == "Woman":
-        #     image_path = "./template/Шаблон UKR.png"
-        # elif app.language == "RUS" and app.gender == "Man":
-        #     image_path = "./template/Шаблон UKR man.png"
-        # elif app.language == "UKR" and app.gender == "Man":
-        #     image_path = "./template/Шаблон UKR man.png"
+        if self.language == "RUS" and self.gender == "Woman":
+            image_path = "./jpeg/template/Шаблон RUS.png"
+        elif self.language == "UKR" and self.gender == "Woman":
+            image_path = "./jpeg/template/Шаблон UKR.png"
+        elif self.language == "RUS" and self.gender == "Man":
+            image_path = "./jpeg/template/Шаблон UKR man.png"
+        elif self.language == "UKR" and self.gender == "Man":
+            image_path = "./jpeg/template/Шаблон UKR man.png"
 
         self.pdf.drawImage(image_path, x=0, y=0, width=width * mm, height=height * mm)
