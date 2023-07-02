@@ -1,21 +1,22 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        img {
-            max-width: 559px ;
-            max-height: 512px;
-        }
-    </style>
-    <title>Карточка</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}">
+    <title>Document</title>
 </head>
 <body>
-    <h1>Детали карточки</h1>
+<h1>Детали карточки</h1>
 
-    <h2>Имя: {{ name }}</h2>
-    <h2>Дата рождения: {{ birthday }}</h2>
+<h3>Имя: {{ name }}</h3>
+<h3>Дата рождения: {{ birthday }}</h3>
 
-    <img src="{{ url_for('static', filename='result/' + name + '_' + birthday + '/' + name + '_' + birthday + '.jpeg') }}" alt="Uploaded Image">
-
+<img src="{{ url_for('static', filename='result/' + name + '_' + birthday + '/' + name + '_' + birthday + '.jpeg') }}"
+     alt="Uploaded Image">
 </body>
 </html>

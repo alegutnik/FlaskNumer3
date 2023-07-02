@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9FA;
+
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Для центрирования по вертикали на весь экран */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+form > div {
+    padding-bottom: 5px;
+}
+
+.form>select{
+    height: 58px;
+}
+
