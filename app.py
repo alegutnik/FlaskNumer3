@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 
 from jpeg.app import Card
+import shutil
+
 
 app = Flask(__name__)
 
@@ -8,6 +10,8 @@ app = Flask(__name__)
 @app.route("/", methods=["POST", "GET"])
 def index():
     if request.method == "POST":
+        path = "static/result"
+        shutil.rmtree(path)
         name = request.form["name"]
         birthday = request.form["birthday"]
         language = request.form["language"]
