@@ -12,6 +12,14 @@ body {
     height: 100vh; /* Для центрирования по вертикали на весь экран */
 }
 
+.form-wrapper-colum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Для центрирования по вертикали на весь экран */
+}
+
 
 form {
     display: flex;
@@ -23,7 +31,12 @@ form > div {
     padding-bottom: 5px;
 }
 
-.form>select{
+.form-wrapper-colum > img {
+    max-width: 75%;
+
+}
+
+.form > select {
     height: 58px;
 }
 

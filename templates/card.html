@@ -11,12 +11,16 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Детали карточки</h1>
+<div class="form-wrapper-colum col-md-5">
+    <div class="text-wrapper">
+        <h4>Детали карточки</h4>
 
-<h3>Имя: {{ name }}</h3>
-<h3>Дата рождения: {{ birthday }}</h3>
+        <h5>Имя: {{ name }}</h5>
+        <h5>Дата рождения: {{ birthday }}</h5>
+    </div>
 
-<img src="{{ url_for('static', filename='result/' + name + '_' + birthday + '/' + name + '_' + birthday + '.jpeg') }}"
-     alt="Uploaded Image">
+    <img src="{{ url_for('static', filename='result/' + name + '_' + birthday + '/' + name + '_' + birthday + '.jpeg') }}"
+         alt="Uploaded Image">
+</div>
 </body>
 </html>

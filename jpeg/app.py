@@ -90,7 +90,7 @@ class Card:
         pdf.pdf.save()
         path = f"static/result/{self.name}_{self.birthday}/{self.name}_{self.birthday}"
         images = convert_from_path(f"{path}.pdf", 400)
-
+        # images = convert_from_path(f"{path}.pdf", 400, poppler_path=r'jpeg\poppler-0.68.0\bin')
         images[0].save(f"{path}.jpeg", "JPEG")
 
         # os.startfile(f"{path}.jpeg".replace("/", "\\"))
