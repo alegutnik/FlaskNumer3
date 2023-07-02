@@ -1,8 +1,9 @@
+import os
+import shutil
+
 from flask import Flask, render_template, request
 
 from jpeg.app import Card
-import shutil
-
 
 app = Flask(__name__)
 
@@ -11,7 +12,12 @@ app = Flask(__name__)
 def index():
     if request.method == "POST":
         path = "static/result"
-        shutil.rmtree(path)
+        if os.path.exists(path):
+            print("Папка существует")
+            shutil.rmtree(path)
+        else:
+            print("Папка не существует")
+
         name = request.form["name"]
         birthday = request.form["birthday"]
         language = request.form["language"]
