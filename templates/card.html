@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        img {
+            max-width: 559px ;
+            max-height: 512px;
+        }
+    </style>
+    <title>Карточка</title>
+</head>
+<body>
+    <h1>Детали карточки</h1>
+
+    <h2>Имя: {{ name }}</h2>
+    <h2>Дата рождения: {{ birthday }}</h2>
+
+    <img src="{{ url_for('static', filename='result/' + name + '_' + birthday + '/' + name + '_' + birthday + '.jpeg') }}" alt="Uploaded Image">
+
+</body>
+</html>
